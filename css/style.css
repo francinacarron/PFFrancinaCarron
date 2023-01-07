@@ -1,0 +1,696 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display:ital@1&display=swap');
+
+body {
+    background-color: rgba(238, 185, 210, 0.322); 
+    margin: 0;
+    position: relative;
+    padding-bottom: 240px;
+}
+
+main h1 {
+    color: lightcoral;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 20px;
+    font-weight: lighter;
+    animation-name: text-focus-in;
+    animation-duration: 2s;
+}
+
+@keyframes text-focus-in {
+    0% {
+    -webkit-filter: blur(12px);
+        filter: blur(12px);
+    opacity: 0;
+    }
+    100% {
+    -webkit-filter: blur(0px);
+        filter: blur(0px);
+    opacity: 1;
+    }
+}
+
+.subtitulos h2{
+    color: lightcoral;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 35px;
+    margin-top: 5px;
+    font-weight: lighter;
+}
+
+.sub-subtitulos h2{
+    color: lightcoral;
+    font-family: 'Playfair Display', serif;
+    text-align:  center;
+    font-size: 25px;
+    margin-top: 5px;
+    font-weight: lighter;
+}
+
+.navbar {
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(90deg, rgba(203,150,174,0.3477766106442577) 0%, rgba(242,217,229,0.35) 34%, rgba(212,143,175,0.35) 100%);
+    background-repeat: no-repeat ;
+    background-size: cover; 
+    font-size: 30px;
+    font-weight: 400;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+}
+
+.navbar ul {
+    margin-right: 50px;
+    padding: 0 15px;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+}
+
+.navbar li {
+    text-align: center;
+}
+
+.navbar li a {
+    text-decoration: none;
+    padding: 20px 50px;
+    color: rgb(0, 0, 0);
+}
+
+.navbar li a:hover {
+    background-color: lightpink 0.3;
+    color: white;
+}
+
+.img {
+    /*Con un width 100% es el tamaño real de la imagen*/
+    width: 100%;
+    height: 300px;
+    background-image: url(../assets/img/flor_recortada.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /*Cuanto se ve la imagen */
+    filter: opacity(0.7);
+}
+
+.section-cards{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 10px;
+    max-height: 100vh;
+}
+
+.tienda h1{
+    padding: 20px;
+    margin: 10px;
+}
+
+.card{
+    color: #f08080;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    margin: 15px 15px;
+    border: 2px solid #f0808093;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.compra{
+    display:flex;
+    justify-content:space-between;
+    padding: 0 30px;
+}
+
+.card p{
+    text-align: center;
+    background-color: #f7afafa8;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.container{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 200px;
+    grid-template-rows: 100vh;
+    grid-template-areas: 
+    "secciones tienda"
+    ;
+}
+
+.secciones{
+    width: 200px;
+    height:100vh;
+    background-color: rgba(238, 197, 216, 0.349);
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    scroll-behavior: auto;
+    padding-right: 30px;
+    padding-top: 80px;
+}
+
+.secciones p{
+    margin: 50px 0;
+}
+
+.secciones h1{
+    margin-bottom: 50px;
+    padding-top: 30px;
+    font-size: 27px;
+}
+
+.secciones ul{
+    list-style: none;
+    padding: 0 10px;
+}
+
+.secciones li{
+    margin-bottom: 50px;
+}
+
+.secciones a{
+    vertical-align: middle;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    color: black ;
+    vertical-align: middle;
+}
+
+.secciones li a:hover {
+    color: rgb(236, 89, 111);
+}
+
+.secciones li:hover{
+    width: 200px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.253);
+    color:lightcoral;
+    padding-top: 12px;
+}
+
+.pregunta h3{
+    background-color: rgba(238, 197, 216, 0.6); 
+    width: auto;
+    color: lightcoral;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 50px;
+    font-weight: lighter;
+    grid-area: pregunta;
+}
+
+.respuesta p{
+    background-color: rgba(248, 248, 215, 0.6); 
+    width: 100%;
+    color: lightcoral;
+    font-family: 'Playfair Display', serif;
+    text-align: left;
+    font-size: 20px;
+    font-weight: lighter;
+    grid-area: respuesta;
+}
+
+
+.redes, .redes_qa{
+    display: inline;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(238, 197, 216, 0.6);
+}
+
+.redes, .redes_qa ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.redes_tienda{
+    bottom: 0;
+    width: 200px;
+    position: fixed;
+}
+
+.redes_tienda ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(238, 197, 216, 0.6);
+}
+
+.redes_tienda li a{
+    margin: 10px;
+}
+
+form{
+	width:80%;
+	padding:16px 0px;
+    padding-top: 50px;
+	margin:auto;
+}
+
+form label{
+	width: 50%;
+	font-weight:bold;
+	display:inline-block;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+}
+
+form input[type="text"],
+form input[type="email"]{
+	width: 60%;
+	padding:3px 10px;
+	margin:8px 0;
+	display:inline-block;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+}
+
+form input[type="submit"]{
+	width:100%;
+	padding:8px 16px;
+	margin-top:32px;
+	display:block;
+	color:#fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+	background-color:#000;
+} 
+
+form input[type="submit"]:hover{
+	cursor:pointer;
+    background-color: white;
+    color: lightcoral;
+}
+
+textarea{
+	width:100%;
+	height:100px;
+	border:1px solid #f6f6f6;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+	border-radius:3px;
+	background-color:#f6f6f6;			
+	margin:8px 0;
+	resize:none;
+	display:block;
+}
+
+.contacto{
+    display: grid;
+    gap: 10px 0px;
+    width: 100%;
+    height: 65vh;
+    justify-items: center;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "titulo mail"
+    "sub-subtitulos mail"
+    "mapa mail"
+    "mapa-subtitulos mail"
+    ;
+}
+
+.main h1{
+    grid-area: titulo;
+}
+.sub-subtitulos h2{
+    grid-area: sub-subtitulos;
+}
+
+.mapa iframe{
+    width: 500px;
+    height: 400px;
+    grid-area: mapa;
+}
+
+.mapa-subtitulos h3{
+    color: lightcoral;
+    font-family: 'Playfair Display', serif;
+    text-align:  center;
+    font-size: 25px;
+    font-weight: lighter;
+    grid-area: mapa-subtitulos;
+}
+
+.mapa-subtitulos h3 img{
+    vertical-align: middle;
+}
+
+.mail{
+    top: 80px;
+    grid-area: mail;
+}
+
+.mail:hover{
+    background-color: rgba(248, 248, 215, 0.8); 
+    width: 80px; height: 60px;
+    padding-left: 16px;
+    padding-top: 3px;
+}
+
+.preg_frec{
+    grid-template-columns: 100%;
+    grid-template-rows: auto ;
+    grid-template-areas: 
+    "pregunta"
+    "respuesta"
+    "pregunta"
+    "respuesta"
+    ;
+}
+
+
+@media (max-width: 850px){
+
+    .navbar { 
+        font-size: 19px;
+        font-weight: 400;
+        height: 70px;
+    }
+    
+    .navbar ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .navbar li {
+        text-align: center;
+    }
+    
+    .navbar li a {
+        padding: 30px 0px;
+    }
+    
+    .container{
+        grid-gap: 50px;
+        grid-template-columns: 100%;
+        grid-template-rows: auto ;
+        grid-template-areas: 
+        "secciones"
+        "tienda"
+        ;
+    }
+
+    .secciones ul {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        background-color: rgba(238, 197, 216, 0.6);
+    }
+
+    .secciones{
+        width: 100%;
+        height: 30px;
+        font-size: 20px;
+        font-weight: 200;
+        text-decoration: none;
+        font-family: 'Playfair Display', serif;
+        padding: 0px;
+    }
+    
+    .secciones p{
+        visibility:collapse;
+    }
+    
+    .secciones h1{
+        font-size: 20px;
+    }
+    
+    .secciones ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        display: fixed;
+        padding-top: 10px;
+        padding-right: 15px;
+    }
+
+    .secciones li{
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+    
+    .secciones a{
+        vertical-align: middle;
+        text-decoration: none;
+        font-family: 'Playfair Display', serif;
+        color: black ;
+        vertical-align: middle;
+    }
+
+    .section-cards{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        padding: 0px;
+        max-height: 100vh;
+    }
+    
+    .tienda h1{
+        padding-top: 0px;
+        margin: 0px;
+        font-size: 30px;
+    }
+    
+    .card{
+        color: #f08080;
+        font-family: 'Playfair Display', serif;
+        font-size: 10px;
+        margin: 5px 5px;
+        border: 2px solid #f0808093;
+    }
+    
+    .compra{
+        display:flex;
+        justify-content:space-between;
+        padding: 0 30px;
+    }
+    
+    .card p{
+        text-align: center;
+        background-color: #f7afafa8;
+        padding: 5px 0;
+        font-size: 18px;
+        font-weight: bolder;
+    }
+
+    .redes_qa{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+    }
+
+    .redes{
+        bottom: 30vh;
+        left: 0px;
+        width: 70px;
+        position: fixed;
+    }
+
+    .redes ul {
+        display: table-row;
+    }
+
+    .redes li {
+        padding:15px 15px ;
+    }
+
+    main h1{
+        font-size: 35px;
+    }
+
+    .subtitulos h2{
+        font-size: 30px;
+        width: 100%;
+    }
+
+    .pregunta h3{
+        font-size: 25px;
+    }
+
+    .respuesta p{
+        font-size: 20px;
+    }
+
+    form label{
+        font-size: 18px;
+    }
+    
+    form input[type="text"],
+    form input[type="email"]{
+        font-size: 12px;
+    }
+    
+    form input[type="submit"]{
+        font-size: 12px;
+        width: 70%;
+    } 
+    
+    textarea{
+        width:70%;
+        height:100px;
+        font-size: 12px;
+} 
+
+    .mapa iframe{
+        width: 400px;
+        height: 300px;
+    }
+
+}
+
+
+@media (max-width: 480px){
+
+    .navbar{
+        width: 100%;
+    }
+
+    .redes{
+        width: 50px;
+    }
+
+    .redes img{
+        width: 23px;
+        height: 23px;
+    }
+
+    .redes_qa{
+        width: 100%;
+    }
+
+    .contacto{
+        justify-items: center;
+    }
+
+    main h1{
+        padding-top: 30px;
+        font-size: 30px;
+        padding-left: 100px;
+    }
+
+    form label{
+        font-size: 15px;
+    } 
+
+    .sub-subtitulos h2{
+        font-size: 14px;
+    }
+
+    .mapa-subtitulos h3{ 
+        font-size: 13px;
+    }
+
+}
+
+
+
+@media (max-width: 398px){
+
+    .img {
+        height: 160px;
+    }
+
+    .navbar { 
+        font-size: 15px;
+    }
+
+    .container{
+        grid-gap: 15px;
+    }
+
+    .secciones{
+        font-size: 10px;
+    }
+    
+    .secciones h1{
+        font-size: 20px;
+    }
+    
+    .section-cards{
+        padding: 0px;
+    }
+    
+    .tienda h1{
+        font-size: 15px;
+    }
+    
+    .card{
+        color: #f08080;
+        font-family: 'Playfair Display', serif;
+        font-size: 10px;
+        margin: 5px 5px;
+        border: 2px solid #f0808093;
+    }
+
+    main h1{
+        font-size: 40px;
+        padding-bottom: 5px;
+        padding-left: 100px;
+    }
+
+    .sub-subtitulos h2{
+        /* padding-left: 60px; */
+        font-size: 10px;
+        width: 100%;
+    }
+
+    .redes img{
+        width: 20px;
+        height: 20px;
+    }
+
+    .redes{
+        width: 50px;
+    }
+
+    form label{
+        font-size: 15px;
+    }
+
+    .mapa iframe{
+        width: 300px;
+        height: 200px;
+    }
+
+}
+
+@media (max-width: 398px){
+
+    .card img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .compra img{
+        width: 20px;
+        height: 20px;
+    }
+
+    /* main{
+        padding-left: 20vh;
+    } */
+}
