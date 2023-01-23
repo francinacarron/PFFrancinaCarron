@@ -1,0 +1,10 @@
+@mixin font($fuente, $tamaño , $color){
+    font-family: $fuente;
+    font-size: $tamaño;
+    color: $color;
+}
+
+@mixin grid($columnas,$filas){
+    grid-template-columns: $columnas;
+    grid-template-rows: $filas ;
+}

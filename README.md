@@ -1,11 +1,20 @@
-*** SEGUNDA PRE-ENTREGA CODER ***
+#README
 
-Puntos a comentar:
+##Proyecto CODERHOUSE
 
-1. Todas las paginas cuenta con flexbox y grids, excepto:
-    - inicio: esta realizada puramente con flexbox
-    - email: no tiene grid, dado que la forma en la que la hice, me es mucho mas util poder manterla tal y como esta (si es necesario puedo modificarlo). 
-    - Sin embargo, mas de dos cumplen con la consigna
-2. Todas las paginas web son responsive, sin embargo (aunque se que no es lo "correcto"), en vez de utilizar las medidas estandares para la media query, use medidas a partir de las cuales algun aspecto de la pagina "se rompia". Me parecio la mejor forma de asegurarme de que iba a poder funciona en todas las medidas.
-3. Transiciones agregue solo en los titulos ya que no encontre algun lugar donde realmente quede bien y estetico. Las transformaciones estan utilizadas en las cards cuando se ubica sobre ellas con el mouse
-4. El repository de git lo comence tarde asi que agregue un comentario sin haber cambiado realmente el codigo para poder demostrar que entiendo el funcionamento del mismo. Sin embargo, al haber realizado gran parte del proyecto en una computadora prestada, no pude realizarlo antes como para poder dejar asentado todo el proceso con los commits.
+##Tercer entrega
+
+Tercer entrega de CODER que constá del desarrollo de una página web de una florería. 
+
+En esta última entrega previo al proyecto final se trabajó con:
+
+- SASS: Todo el código fue reversionado a este lenguaje. Haciendo uso tanto de mixins como variables.
+- SEO: Mediante la utilización de los meta tag, kw y favicon vistos en clase
+- Reversión subida correctamente a github, haciendo omisión mediante el gitignore de archivos innecesarios como node_modules.
+- Todas las páginas son 100% responsive y las imagenes utilizadas en ella cuenta con el alt definido.
+
+### :tw-2757: :tw-2757: Puntos  a  aclarar  ### :tw-2757: :tw-2757:
+
+- En la segunda pre entrega, donde se aclara que se puede elegir trabajar con bootstrap o flex + grids, se optó por esta última ya que prefiero aprovechar este curso para aprender bien el código puro. 
+- Las medidas utilizadas en el media query no son las estándares, ya que me basé en utilizar los valores donde distintos aspectos de la página "se rompían".
+- Se arregló el footbar para que tenga la misma funcionalidad independientemente de su medida y se agregaron las descripciones alt a las imagenes.
