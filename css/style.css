@@ -54,9 +54,11 @@
 
 body {
   background-color: rgba(238, 185, 210, 0.322);
-  margin: 0;
   position: relative;
-  padding-bottom: 240px; }
+  padding-bottom: 50px; }
+
+.main_body {
+  background-color: rgba(238, 185, 210, 0.322); }
 
 main h1 {
   color: lightcoral;
@@ -94,10 +96,6 @@ main h1 {
   padding: 5px;
   max-height: 100%; }
 
-.tienda h1 {
-  padding: 20px;
-  margin: 10px; }
-
 .card {
   font-family: "Playfair Display", serif;
   font-size: 15px;
@@ -121,24 +119,33 @@ main h1 {
   justify-content: space-between;
   padding: 0 30px; }
 
-.container {
+.container_tienda {
   display: grid;
-  width: 100%;
   height: 100%;
-  grid-template-columns: 200px;
-  grid-template-rows: 100vh;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto;
   grid-template-areas: "secciones tienda"; }
 
+.tienda {
+  grid-area: tienda; }
+  .tienda h1 {
+    padding: 20px;
+    margin: 10px; }
+
+.tienda_1 {
+  grid-area: tienda; }
+  .tienda_1 h1 {
+    padding: 20px;
+    margin: 10px; }
+
 .secciones {
-  width: 200px;
-  height: 100vh;
   background-color: rgba(238, 197, 216, 0.349);
   font-weight: 400;
   text-decoration: none;
   text-align: center;
-  scroll-behavior: auto;
   padding-right: 30px;
-  padding-top: 80px; }
+  padding-top: 80px;
+  grid-area: secciones; }
   .secciones p {
     margin: 50px 0; }
   .secciones h1 {
@@ -195,50 +202,52 @@ main h1 {
   justify-items: center;
   grid-template-columns: 90% 10%;
   grid-template-rows: auto auto auto auto;
-  grid-template-areas: "titulo mail" "sub-subtitulos mail" "mapa mail" "mapa-subtitulos mail"; }
-
-.main h1 {
-  grid-area: titulo; }
-
-.sub-subtitulos h2 {
-  grid-area: sub-subtitulos;
-  color: #f39494;
-  font-family: "Karla", sans-serif; }
-
-.mapa iframe {
-  width: 500px;
-  height: 400px;
-  grid-area: mapa; }
-
-.mapa-subtitulos p {
-  font-family: "Playfair Display", serif;
-  font-size: 25px;
-  color: lightcoral;
-  text-align: center;
-  font-weight: lighter;
-  grid-area: mapa-subtitulos; }
-  .mapa-subtitulos p img {
-    vertical-align: middle; }
-
-.mail {
-  top: 80px;
-  padding-right: 20px;
-  grid-area: mail; }
-  .mail:hover {
-    background-color: rgba(248, 248, 215, 0.8);
-    width: 80px;
-    height: 60px;
-    padding-left: 16px;
-    padding-top: 3px; }
+  grid-template-areas: "titulo mail"
+ "sub-subtitulos mail"
+ "mapa mail"
+ "mapa-subtitulos mail"; }
+  .contacto .main h1 {
+    grid-area: titulo; }
+  .contacto .sub-subtitulos h2 {
+    grid-area: sub-subtitulos;
+    color: #f39494;
+    font-family: "Karla", sans-serif; }
+  .contacto .mapa iframe {
+    width: 500px;
+    height: 400px;
+    grid-area: mapa; }
+  .contacto .mapa-subtitulos p {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    color: lightcoral;
+    text-align: center;
+    font-weight: lighter;
+    grid-area: mapa-subtitulos; }
+    .contacto .mapa-subtitulos p img {
+      vertical-align: middle; }
+  .contacto .mail {
+    top: 80px;
+    padding-right: 20px;
+    grid-area: mail; }
+    .contacto .mail:hover {
+      background-color: rgba(248, 248, 215, 0.8);
+      width: 80px;
+      height: 60px;
+      padding-left: 16px;
+      padding-top: 3px; }
 
 .preg_frec {
   grid-template-columns: 100%;
   grid-template-rows: auto;
-  grid-template-areas: "pregunta" "respuesta" "pregunta" "respuesta"; }
+  grid-template-areas: "pregunta"
+ "respuesta"
+ "pregunta"
+ "respuesta"; }
 
 form {
   width: 100%;
   padding-top: 50px;
+  padding-bottom: 30px;
   margin: 0 auto;
   padding-left: 30%;
   justify-items: center; }
@@ -299,87 +308,112 @@ textarea {
     display: flex;
     justify-content: space-around; }
 
-.redes_tienda {
-  bottom: 0;
-  width: 200px;
-  position: fixed; }
-  .redes_tienda ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(238, 197, 216, 0.6); }
-    .redes_tienda ul li a {
-      margin: 10px; }
-
 @media (max-width: 850px) {
   body {
     width: 100%;
     position: relative; }
   .navbar {
-    font-size: 19px;
+    font-size: 23px;
     font-weight: 400;
-    height: 70px; }
+    height: 70px;
+    width: 100vw; }
     .navbar ul {
-      display: flex;
-      justify-content: space-around; }
+      padding: 0 0px;
+      padding-top: 20px;
+      margin-right: 20px; }
       .navbar ul li {
         text-align: center; }
         .navbar ul li a {
-          padding: 30px 0px; }
-  ***************************** *********** TIENDA ********** ***************************** .container {
-    grid-gap: 50px;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-template-areas: "secciones" "tienda"; }
+          padding: 30px 15px; }
+    .navbar img {
+      width: 50px;
+      height: 50px; }
+  ***************************** *********** TIENDA ********** ***************************** .container_tienda {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "secciones"
+ "tienda"; }
   .secciones {
-    width: 100%;
+    width: 100vw;
     height: 70px;
     font-size: 20px;
     font-weight: 200;
     text-decoration: none;
     font-family: 'Playfair Display', serif;
-    padding: 0px; }
+    padding: 0px 7px;
+    background-color: rgba(238, 197, 216, 0.404);
+    grid-area: secciones; }
+    .secciones p {
+      margin: 0px; }
     .secciones ul {
-      display: flex;
-      width: 100%;
       justify-content: space-between;
       list-style: none;
       display: flex;
-      justify-content: space-between;
       display: fixed;
       padding-top: 10px;
-      padding-right: 15px; }
-    .secciones h1 {
-      font-size: 20px; }
+      padding-right: 0px; }
     .secciones li {
-      margin-bottom: 10px;
-      padding-left: 10px; }
+      margin-bottom: 10px; }
     .secciones a {
       vertical-align: middle;
       text-decoration: none;
       font-family: 'Playfair Display', serif;
       color: black;
-      vertical-align: middle; }
-  .section-cards {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    padding: 0px;
-    max-height: 100%; }
-  .tienda h1 {
-    margin-bottom: 50px; }
-  .tienda .card {
-    color: #f08080;
-    font-family: 'Playfair Display', serif;
-    font-size: 10px;
-    margin: 10px 5px;
-    border: 2px solid #f0808093; }
-  .tienda .p {
-    text-align: center;
-    background-color: #f7afafa8;
-    padding: 5px 0;
-    font-size: 18px;
-    font-weight: bolder; }
+      vertical-align: middle;
+      padding: 0px 10px; }
+  .tienda {
+    grid-area: tienda;
+    width: 100vw;
+    position: absolute;
+    top: 30px;
+    margin-top: 25px;
+    align-items: center; }
+    .tienda h1 {
+      margin-bottom: 20px;
+      margin-top: 80px; }
+    .tienda .p {
+      text-align: center;
+      background-color: #f7afafa8;
+      padding: 5px 0;
+      font-size: 18px;
+      font-weight: bolder; }
+    .tienda .section-cards {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      margin-bottom: 60px; }
+      .tienda .section-cards .card {
+        color: #f08080;
+        font-family: 'Playfair Display', serif;
+        font-size: 10px;
+        margin: 10px 5px;
+        border: 2px solid #f0808093; }
+  .tienda_1 {
+    grid-area: tienda;
+    width: 100vw;
+    top: 30px;
+    margin-top: 25px;
+    align-items: center; }
+    .tienda_1 h1 {
+      margin-bottom: 20px;
+      margin-top: 80px; }
+    .tienda_1 .p {
+      text-align: center;
+      background-color: #f7afafa8;
+      padding: 5px 0;
+      font-size: 18px;
+      font-weight: bolder; }
+    .tienda_1 .section-cards {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      margin-bottom: 60px; }
+      .tienda_1 .section-cards .card {
+        color: #f08080;
+        font-family: 'Playfair Display', serif;
+        font-size: 10px;
+        margin: 10px 5px;
+        border: 2px solid #f0808093; }
   .compra {
     display: flex;
     justify-content: space-between;
@@ -399,41 +433,150 @@ textarea {
     width: 70%;
     height: 100px;
     font-size: 12px; }
-  ***************************** ********** CONTACTO ********* ***************************** .mapa iframe {
+  ******************************* ********** CONTACTO *********** ******************************* .contacto .mail img {
+    margin-right: 50px; }
+  ******************************* ********** CONTACTO *********** ******************************* .contacto .mapa iframe {
     width: 400px;
     height: 300px; }
-  .sub-subtitulos h2 {
+  ******************************* ********** CONTACTO *********** ******************************* .contacto .main h1 {
+    font-size: 40px; }
+  ******************************* ********** CONTACTO *********** ******************************* .contacto .sub-subtitulos h2 {
     font-size: 3vh; }
   ***************************** ************ Q_A ************ ***************************** .pregunta h3 {
     font-size: 4vw; }
   .respuesta p {
-    font-size: 3vw; } }
+    font-size: 3vw; }
+  .redes_qa {
+    position: fixed;
+    bottom: 0px;
+    left: 0px; } }
+
+@media (max-width: 673px) {
+  .navbar {
+    font-size: 19px; }
+  .contacto .mail img {
+    padding-right: 50px; }
+  .contacto .sub-subtitulos h2 {
+    padding-left: 25px; }
+  .contacto .mapa iframe {
+    width: 380px;
+    height: 280px; }
+  .contacto .mapa-subtitulos p {
+    font-size: 18px; } }
 
 @media (max-width: 500px) {
   .navbar {
     width: 100%;
-    font-size: 20px; }
+    font-size: 15px; }
+    .navbar img {
+      width: 40px;
+      height: 40px;
+      padding-top: 8px;
+      padding-left: 5px; }
+  .contacto .mail {
+    padding-right: 40px; }
+    .contacto .mail img {
+      width: 40px;
+      height: 40px; }
+  .contacto .sub-subtitulos {
+    font-size: 15px;
+    padding-left: 20px; }
+  .contacto .mapa iframe {
+    width: 310px;
+    height: 210px; }
+  .contacto .mapa-subtitulos p {
+    font-size: 15px; }
   ***************************** *********** REDES *********** ***************************** .redes_qa {
     width: 100%; }
-  ***************************** ********* CONTACTO ********** ***************************** .contacto {
-    justify-items: center; }
   main h1 {
     padding-top: 30px;
     font-size: 9vw; }
   .subtitulos h2 {
     font-size: 6vw; }
-  .sub-subtitulos h2 {
-    font-size: 17px; }
-  .mapa-subtitulos h3 {
-    font-size: 13px; }
   .pregunta h3 {
     font-size: 4vw; }
   .respuesta p {
     font-size: 3vw; }
-  ***************************** ********** TIENDA *********** ***************************** .tienda h1 {
-    padding-top: 5px;
-    font-size: 13vw; }
-  .secciones a {
-    font-size: 4vw; }
+  ***************************** ********** TIENDA *********** ***************************** .tienda {
+    margin-right: 100px; }
+    ***************************** ********** TIENDA *********** ***************************** .tienda h1 {
+      padding-top: 5px;
+      font-size: 13vw;
+      padding-right: 50px; }
+  .secciones ul {
+    padding: 0px;
+    height: 30px; }
+    .secciones ul li {
+      padding: auto;
+      margin-top: 10px; }
+      .secciones ul li a {
+        font-size: 13px;
+        padding: 0px 1px; }
   ***************************** *********** EMAIL *********** ***************************** form label {
     font-size: 15px; } }
+
+@media (max-width: 391px) {
+  .navbar {
+    font-size: 15px; }
+    .navbar li {
+      margin: 0px 1px;
+      padding-top: 8px; }
+      .navbar li a {
+        padding: 0px 1px; }
+    .navbar img {
+      width: 30px;
+      height: 30px;
+      margin-top: 12px;
+      padding-bottom: 0px;
+      margin-left: 5px; }
+  .secciones {
+    height: 50px; }
+    .secciones ul li {
+      margin-top: 6px; }
+      .secciones ul li a {
+        font-size: 12px;
+        padding: 0px 3px; }
+  .contacto .mail:hover {
+    width: 1px;
+    height: 1px;
+    padding-left: 1px;
+    padding-top: 1px; }
+  .contacto .sub-subtitulos h2 {
+    font-size: 14px; }
+  .contacto .mapa iframe {
+    padding-left: 10vw; }
+  .tienda {
+    align-items: center; }
+    .tienda h1 {
+      margin-bottom: 20px;
+      margin-top: 80px; }
+    .tienda .card {
+      color: #f08080;
+      font-family: 'Playfair Display', serif;
+      font-size: 10px;
+      margin: 10px 5px;
+      border: 2px solid #f0808093; }
+      .tienda .card img {
+        width: 200px;
+        height: 200px; }
+      .tienda .card .compra img {
+        width: 25px;
+        height: 25px; }
+      .tienda .card .compra h2 {
+        font-size: 10px; }
+    .tienda .p {
+      text-align: center;
+      background-color: #f7afafa8;
+      padding: 5px 0;
+      font-size: 10px;
+      font-weight: bolder; }
+  .redes img, .redes_qa img {
+    width: 35px;
+    height: 35px; } }
+
+@media (max-width: 291px) {
+  .navbar {
+    font-size: 15px; }
+    .navbar ul li a {
+      padding-left: 1px;
+      padding-right: 3px; } }
