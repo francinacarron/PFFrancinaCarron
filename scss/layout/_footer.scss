@@ -1,0 +1,17 @@
+.redes {
+	display: inline;
+	position: absolute; 
+	bottom: 0px;
+	width: 100%;
+	background-color: rgba(238, 197, 216, 0.6);
+    ul {
+	    display: flex;
+	    justify-content: space-around;
+    }
+}
+
+.redes_qa{
+    @extend .redes;
+}
+
+
