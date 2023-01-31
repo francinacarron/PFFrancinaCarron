@@ -55,7 +55,7 @@
 body {
   background-color: rgba(238, 185, 210, 0.322);
   position: relative;
-  padding-bottom: 50px; }
+  padding-bottom: 70px; }
 
 .main_body {
   background-color: rgba(238, 185, 210, 0.322); }
@@ -95,29 +95,27 @@ main h1 {
   justify-content: space-around;
   padding: 5px;
   max-height: 100%; }
-
-.card {
-  font-family: "Playfair Display", serif;
-  font-size: 15px;
-  color: #f08080;
-  font-weight: 4px;
-  margin: 15px 15px;
-  border: 2px solid #f0808093; }
-  .card:hover {
-    transform: scale(1.1); }
-  .card p {
-    font-family: "Karla", sans-serif;
-    font-size: 18px;
-    color: white;
-    text-align: center;
-    background-color: #f7afafa8;
-    padding: 5px 0;
-    font-weight: bolder; }
-
-.compra {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 30px; }
+  .section-cards .card {
+    font-family: "Playfair Display", serif;
+    font-size: 15px;
+    color: #f08080;
+    font-weight: 4px;
+    margin: 15px 15px;
+    border: 2px solid #f0808093; }
+    .section-cards .card:hover {
+      transform: scale(1.1); }
+    .section-cards .card p {
+      font-family: "Karla", sans-serif;
+      font-size: 18px;
+      color: white;
+      text-align: center;
+      background-color: #f7afafa8;
+      padding: 5px 0;
+      font-weight: bolder; }
+    .section-cards .card .compra {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 30px; }
 
 .container_tienda {
   display: grid;
@@ -125,12 +123,11 @@ main h1 {
   grid-template-columns: 200px 1fr;
   grid-template-rows: auto;
   grid-template-areas: "secciones tienda"; }
-
-.tienda {
-  grid-area: tienda; }
-  .tienda h1 {
-    padding: 20px;
-    margin: 10px; }
+  .container_tienda .tienda {
+    grid-area: tienda; }
+    .container_tienda .tienda h1 {
+      padding: 20px;
+      margin: 10px; }
 
 .tienda_1 {
   grid-area: tienda; }
@@ -202,10 +199,7 @@ main h1 {
   justify-items: center;
   grid-template-columns: 90% 10%;
   grid-template-rows: auto auto auto auto;
-  grid-template-areas: "titulo mail"
- "sub-subtitulos mail"
- "mapa mail"
- "mapa-subtitulos mail"; }
+  grid-template-areas: "titulo mail" "sub-subtitulos mail" "mapa mail" "mapa-subtitulos mail"; }
   .contacto .main h1 {
     grid-area: titulo; }
   .contacto .sub-subtitulos h2 {
@@ -239,10 +233,7 @@ main h1 {
 .preg_frec {
   grid-template-columns: 100%;
   grid-template-rows: auto;
-  grid-template-areas: "pregunta"
- "respuesta"
- "pregunta"
- "respuesta"; }
+  grid-template-areas: "pregunta" "respuesta" "pregunta" "respuesta"; }
 
 form {
   width: 100%;
@@ -303,8 +294,10 @@ textarea {
   position: absolute;
   bottom: 0px;
   width: 100%;
+  padding-top: 5px;
   background-color: rgba(238, 197, 216, 0.6); }
   .redes ul, .redes_qa ul {
+    list-style-type: none;
     display: flex;
     justify-content: space-around; }
 
@@ -331,8 +324,7 @@ textarea {
   ***************************** *********** TIENDA ********** ***************************** .container_tienda {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    grid-template-areas: "secciones"
- "tienda"; }
+    grid-template-areas: "secciones" "tienda"; }
   .secciones {
     width: 100vw;
     height: 70px;
