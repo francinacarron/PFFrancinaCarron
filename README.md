@@ -17,7 +17,7 @@ En este proyecto final se trabajó con:
 ### :tw-2757: :tw-2757: Puntos  a  aclarar  :tw-2757: :tw-2757:
 
 - Actualmente, despues de mirar con otros ojos cada pagina que visito, hubiese modificado MIL cosas de lo visual pero creo que es algo que ire mejorando con el paso del tiempo
-- Con respecto al codigo, intente agregarle un par de comentarios a fin de ser lo mas legible posible
+- Con respecto al codigo, intente agregarle un par de comentarios en mediaQ si habian muchos ajustes a fin de ser lo mas legible posible 
 - Con respecto al presupuesto, alguno valores no pude encontrarlos en tarifario.org asi que me base en lo que comentaste en la clase. En cuanto a horas de mantenimiento, puse un numero super aleatorio que a MI me parecia logico pero la verdad que no tengo mucha nocion del tema. 
 
 ## PRESUPUESTO
