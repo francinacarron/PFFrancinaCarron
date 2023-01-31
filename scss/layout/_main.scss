@@ -2,7 +2,7 @@
 body {
     background-color: rgba(238, 185, 210, 0.322); 
     position: relative;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
 }
 
 .main_body{
@@ -47,31 +47,29 @@ main h1 {
 	justify-content: space-around;
 	padding: 5px;
 	max-height: 100%; 
+	.card{
+		@include font($tipografia-secundaria, 15px, #f08080);
+		font-weight: 4px;
+		margin: 15px 15px; 
+		border: 2px solid #f0808093;
+		&:hover{
+			transform: scale(1.1);
+		}
+		p{
+			@include font($tipografia, 18px, white);
+			text-align: center;
+			background-color: #f7afafa8;
+			padding: 5px 0;
+			font-weight: bolder;
+		}
+		.compra{
+			display: flex;
+			justify-content: space-between;
+			padding: 0 30px;
+		}
+	}
 }
 
-
-.card{
-    @include font($tipografia-secundaria, 15px, #f08080);
-    font-weight: 4px;
-	margin: 15px 15px; 
-	border: 2px solid #f0808093;
-	&:hover{
-		transform: scale(1.1);
-    }
-	p{
-        @include font($tipografia, 18px, white);
-		text-align: center;
-		background-color: #f7afafa8;
-		padding: 5px 0;
-		font-weight: bolder;
-    }
-}
-
-.compra{
-	display: flex;
-	justify-content: space-between;
-	padding: 0 30px;
-}
 
 .container_tienda{
 	display: grid;
@@ -80,15 +78,15 @@ main h1 {
 	grid-template-columns: 200px 1fr;
 	grid-template-rows: auto;
 	grid-template-areas: "secciones tienda";
+	.tienda{ 
+		grid-area: tienda;
+		h1{ 
+			padding: 20px;
+			margin: 10px;
+		}
+	}
 }
 
-.tienda{ 
-	grid-area: tienda;
-	h1{ 
-		padding: 20px;
-		margin: 10px;
-    }
-}
 
 .tienda_1{ 
 	grid-area: tienda;

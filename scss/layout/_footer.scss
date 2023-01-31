@@ -3,8 +3,10 @@
 	position: absolute; 
 	bottom: 0px;
 	width: 100%;
+	padding-top: 5px;
 	background-color: rgba(238, 197, 216, 0.6);
     ul {
+		list-style-type: none;
 	    display: flex;
 	    justify-content: space-around;
     }
