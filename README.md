@@ -22,13 +22,15 @@ En este proyecto final se trabajó con:
 
 ## PRESUPUESTO
 
+Los numeros fuerons modificados en el PDF para que no aparezca el precio por mantenimiento: https://drive.google.com/file/d/1l1Lho5WO-v747gGCWIoeYIayHZJWpINT/view?usp=share_link
+
 - Diseño y maquetación de sitio responsivo/adaptativo Home y 5 secciones para 3 dispositvos (PC, mobile, tablet): **$62652**
 - Backend + Framework: **$8500** + **$8500**
 - Estrategia de marketing y comunicación en redes sociales (se contrata a alguien): **$14450**
 - Tester + multimedia (tomo más de referencia el valor de *"Desarrollo de Web Site Institucional"*): **$28113**
-- Primeros dos meses de mantenimiento (tomo en cuenta *"TARIFAS PARA ASESORAMIENTO / SUPERVISIÓN"* que son por horas y asumo unas 3 horas semanales por 2 meses. ~~Esto no se muestra al cliente~~):** $1526x3x8= 36624**
+- Primeros dos meses de mantenimiento (tomo en cuenta *"TARIFAS PARA ASESORAMIENTO / SUPERVISIÓN"* que son por horas y asumo unas 3 horas semanales por 2 meses. ~~Esto no se muestra al cliente~~):** $1526x2x8= 24416**
 
-	**TOTAL: $158839**
+	**TOTAL: $146,631**
 
 *- A partir de los 5 meses se puede hacer un aumento del 10% en la cuota de mantenimiento*
 
